@@ -1,12 +1,12 @@
 'use client'
 
 import { useState, useContext } from 'react'
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
-import Profile from '../components/Profile'
-import Cart from '../components/Cart'
+import Navbar from '../../components/Navbar'
+import Footer from '../../components/Footer'
+import Profile from '../../components/Profile'
+import Cart from '../../components/Cart'
 import { Product } from '@/types/Product'
-import { DarkModeContext } from '../contexts/DarkModeContext'
+import { DarkModeContext } from '../../contexts/DarkModeContext'
 
 export default function ProfilePage() {
   const [cart, setCart] = useState<{ product: Product; quantity: number }[]>([])

@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { ShoppingCart, Home, Search, User } from 'lucide-react'
+import { ShoppingCart, Home, Search, User, Edit, ShoppingBag, ClipboardList, UsersRound, Utensils } from 'lucide-react'
 import DarkModeToggle from './DarkModeToggle'
 
 interface NavbarProps {
@@ -33,6 +33,13 @@ export default function Navbar({ cartItemCount, onCartClick }: NavbarProps) {
               </span>
             )}
           </button>
+          <Link 
+            href="/profile"
+            className={`flex flex-col items-center p-2 ${pathname === '/profile' ? 'text-blue-500 dark:text-blue-400' : 'text-gray-600 dark:text-gray-400'}`}
+          >
+            <User size={24} />
+            <span className="text-xs mt-1">Profile</span>
+          </Link>
         </div>
       </div>
       <nav className="fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-800 shadow-lg z-10 transition-colors duration-200">
@@ -52,11 +59,18 @@ export default function Navbar({ cartItemCount, onCartClick }: NavbarProps) {
             <span className="text-xs mt-1">Search</span>
           </Link>
           <Link 
-            href="/profile"
-            className={`flex flex-col items-center p-2 ${pathname === '/profile' ? 'text-blue-500 dark:text-blue-400' : 'text-gray-600 dark:text-gray-400'}`}
+            href="/my-orders"
+            className={`flex flex-col items-center p-2 ${pathname === '/my-orders' ? 'text-blue-500 dark:text-blue-400' : 'text-gray-600 dark:text-gray-400'}`}
           >
-            <User size={24} />
-            <span className="text-xs mt-1">Profile</span>
+            <ClipboardList size={24} />
+            <span className="text-xs mt-1">My Orders</span>
+          </Link>
+          <Link 
+            href="/my-store"
+            className={`flex flex-col items-center p-2 ${pathname === '/my-store' ? 'text-blue-500 dark:text-blue-400' : 'text-gray-600 dark:text-gray-400'}`}
+          >
+            <Utensils size={24} />
+            <span className="text-xs mt-1">My Store</span>
           </Link>
         </div>
       </nav>

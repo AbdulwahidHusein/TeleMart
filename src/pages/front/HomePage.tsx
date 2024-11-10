@@ -1,14 +1,15 @@
+// Add this line at the top of your file
 'use client'
 
 import { useState, useContext } from 'react'
-import Navbar from '../components/Navbar'
-import ProductCard from '../components/ProductCard'
-import Cart from '../components/Cart'
-import ProductDetails from '../components/ProductDetails'
-import Footer from '../components/Footer'
-import { products } from '../utils/constants'
+import Navbar from '../../components/Navbar'
+import ProductCard from '../../components/ProductCard'
+import Cart from '../../components/Cart'
+import ProductDetails from '../../components/ProductDetails'
+import Footer from '../../components/Footer'
+import { products } from '../../utils/constants'
 import { Product } from '@/types/Product'
-import { DarkModeContext } from '../contexts/DarkModeContext'
+import { DarkModeContext } from '../../contexts/DarkModeContext'
 
 export default function HomePage() {
   const [cart, setCart] = useState<{ product: Product; quantity: number }[]>([])
@@ -51,7 +52,6 @@ export default function HomePage() {
               key={product.id}
               product={product}
               onAddToCart={addToCart}
-              onViewDetails={setSelectedProduct}
             />
           ))}
         </div>

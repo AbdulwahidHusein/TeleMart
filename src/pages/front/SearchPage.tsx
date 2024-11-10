@@ -1,11 +1,11 @@
 'use client'
 
 import { useState, useContext } from 'react'
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
-import Cart from '../components/Cart'
+import Navbar from '../../components/Navbar'
+import Footer from '../../components/Footer'
+import Cart from '../../components/Cart'
 import { Product } from '@/types/Product'
-import { DarkModeContext } from '../contexts/DarkModeContext'
+import { DarkModeContext } from '../../contexts/DarkModeContext'
 
 export default function SearchPage() {
   const [cart, setCart] = useState<{ product: Product; quantity: number }[]>([])
