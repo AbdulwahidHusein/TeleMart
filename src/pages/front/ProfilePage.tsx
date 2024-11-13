@@ -8,6 +8,7 @@ import Cart from '../../components/Cart'
 import { Product } from '@/types/Product'
 import { DarkModeContext } from '../../contexts/DarkModeContext'
 
+
 export default function ProfilePage() {
   const [cart, setCart] = useState<{ product: Product; quantity: number }[]>([])
   const [isCartOpen, setIsCartOpen] = useState(false)

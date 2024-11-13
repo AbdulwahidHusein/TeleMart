@@ -1,3 +1,6 @@
+import WebApp from '@twa-dev/sdk'
+
+
 export default function Profile() {
     return (
       <div className="max-w-md mx-auto bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden mt-4 transition-colors duration-200">

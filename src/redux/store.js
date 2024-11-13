@@ -34,11 +34,13 @@ const cartSlice = createSlice({
 // Profile info slice
 const profileSlice = createSlice({
   name: 'profile',
-  initialState: { name: '', email: '' },
+  initialState: { first_name: '', last_name: '', tg_id: null, additionalFields: {} },
   reducers: {
     updateProfile: (state, action) => {
-      state.name = action.payload.name;
-      state.email = action.payload.email;
+      state.first_name = action.payload.first_name;
+      state.last_name = action.payload.last_name;
+      state.tg_id = action.payload.tg_id;
+      state.additionalFields = action.payload.additionalFields;
     },
   },
 });

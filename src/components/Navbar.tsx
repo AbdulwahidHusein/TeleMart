@@ -34,7 +34,7 @@ export default function Navbar({ cartItemCount, onCartClick }: NavbarProps) {
             )}
           </button>
           <Link 
-            href="/profile"
+            href="/user-data"
             className={`flex flex-col items-center p-2 ${pathname === '/profile' ? 'text-blue-500 dark:text-blue-400' : 'text-gray-600 dark:text-gray-400'}`}
           >
             <User size={24} />
